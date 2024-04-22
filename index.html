@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Irish Potato Famine</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
+        .tab { overflow: hidden; background-color: #f1f1f1; }
+        .tab button { background-color: inherit; float: left; border: none; outline: none; cursor: pointer; padding: 14px 16px; transition: background-color 0.3s; }
+        .tab button:hover { background-color: #ddd; }
+        .tabcontent { padding: 6px 12px; border: 1px solid #ccc; border-top: none; }
+    </style>
+</head>
+<body>
+
+<div class="tab">
+  <button class="tablinks" onclick="openTab(event, 'Overview')">Overview</button>
+  <button class="tablinks" onclick="openTab(event, 'Causes')">Causes</button>
+  <button class="tablinks" onclick="openTab(event, 'Impact')">Impact</button>
+</div>
+
+<div id="Overview" class="tabcontent">
+  <h3>Overview</h3>
+  <p>The Great Irish Potato Famine, also known as the Great Hunger, was a period of mass starvation, disease, and emigration in Ireland between 1845 and 1852.</p>
+</div>
+
+<div id="Causes" class="tabcontent">
+  <h3>Causes</h3>
+  <p>The primary cause of the famine was a potato disease known as late blight (Phytophthora infestans).</p>
+</div>
+
+<div id="Impact" class="tabcontent">
+  <h3>Impact</h3>
+  <p>The famine had profound impacts, including the loss of approximately one million lives and another million emigrating from Ireland.</p>
+</div>
+
+<script>
+function openTab(evt, tabName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(tabName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+</script>
+
+</body>
+</html>
